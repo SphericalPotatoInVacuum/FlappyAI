@@ -1,0 +1,83 @@
+button {
+    position: absolute;
+    display: block;
+    width: 100px;
+    min-height: 36px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    border: none;
+    margin: 8px;
+    background-color: #4d4d4d;
+    border-radius: 4px;
+    line-height: 36px;
+    box-shadow: 0 8px 0 0 #333333, 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+button.update {
+    left: 620px;
+    top: 20px;
+}
+
+button.update:hover {
+    background-color: #009900;
+    box-shadow: 0 8px 0 0 #008000, 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+button.update:active {
+    background-color: #00ff00;
+    box-shadow: 0 4px 0 0 #00e600, 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    top: 24px;
+}
+
+button:focus {
+    outline: none;
+}
+
+[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    outline: none;
+    position: absolute;
+}
+
+[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    top: -12px;
+    width: 24px;
+    height: 24px;
+    background: #4d4d4d;
+    border-radius: 12px;
+    box-shadow: 0 4px 0 0 #333, 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+[type="range"]::-webkit-slider-thumb:hover {
+    background: #009900;
+    box-shadow: 0 4px 0 0 #008000, 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+[type="range"]::-webkit-slider-thumb:active {
+    background: #00ff00;
+    box-shadow: 0 2px 0 0 #00e600, 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    top: -10px;
+}
+
+[type="range"]::-webkit-slider-runnable-track {
+    width: 168px;
+    height: 8px;
+    cursor: pointer;
+    background: #AAA;
+    border-radius: 4px;
+    box-shadow: inset 0 4px 8px 0 rgba(255, 255, 255, 0.75);
+}
+
+.cSlider {
+    top: 100px;
+}
