@@ -1,3 +1,7 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 button {
     position: absolute;
     display: block;
@@ -17,20 +21,20 @@ button {
     cursor: pointer;
 }
 
-button.update {
-    left: 620px;
-    top: 20px;
+.update {
+    left: 660px;
+    top: 550px;
 }
 
-button.update:hover {
+.update:hover {
     background-color: #009900;
     box-shadow: 0 8px 0 0 #008000, 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
-button.update:active {
-    background-color: #00ff00;
-    box-shadow: 0 4px 0 0 #00e600, 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    top: 24px;
+.update:active {
+    background-color: #33cc33;
+    box-shadow: 0 4px 0 0 #29a329, 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    top: 554px;
 }
 
 button:focus {
@@ -79,5 +83,46 @@ button:focus {
 }
 
 .cSlider {
-    top: 100px;
+    top: 64px;
+    left: 620px;
+}
+
+.nSlider {
+    top: 160px;
+    left: 620px;
+}
+
+.aSlider {
+    top: 256px;
+    left: 620px;
+}
+
+.sSlider {
+    top: 352px;
+    left: 620px;
+}
+
+p {
+    position: absolute;
+    font-size: 18px;
+}
+
+.cText {
+    top: 0px;
+    left: 620px;
+}
+
+.nText {
+    top: 96px;
+    left: 620px;
+}
+
+.aText {
+    top: 192px;
+    left: 620px;
+}
+
+.sText {
+    top: 288px;
+    left: 620px;
 }
