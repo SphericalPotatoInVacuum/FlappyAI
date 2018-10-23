@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
 
     <title>Phyllotaxis</title>
 
@@ -14,21 +14,30 @@
     <script src="libraries/p5.dom.js"></script>
     <script src="libraries/p5.sound.js"></script>
     <script src="sketch.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        canvas {
-            margin: auto;
-        }
-    </style>
 </head>
 
 <body>
+    <div id="wrapper">
+        <div id="sketch-holder"></div>
+        <div id="controls">
+            <p>Radius coefficient.: <span id="rCoef">10</span>
+                </br>
+                <input id="rCoefSlider" type="range" min="0" max="50" value="10" step="1">
+            </p>
+            <p>Total number of dots: <span id="dotCount">10</span>
+                </br>
+                <input id="dotCountSlider" type="range" min="0" max="6000" value="2000" step="100">
+            </p>
+            <p>Angle delta: <span id="aDelta">10</span>
+                </br>
+                <input id="aDeltaSlider" type="range" min="137" max="138" value="137.78" step="0.01">
+            </p>
+            <p>Dot Size: <span id="dotSize">10</span>
+                </br>
+                <input id="dotSizeSlider" type="range" min="1" max="50" value="32" step="1">
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>

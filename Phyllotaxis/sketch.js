@@ -1,40 +1,39 @@
-var nSlider;
-var nText;
-var n = 0;
-var cSlider;
-var cText;
-var c = 0;
-var aSlider;
-var aText;
-var angle = 0;
-var sSlider;
-var sText;
-var s = 0;
-var updateBtn;
+let nSlider;
+let nText;
+let n = 0;
+let cSlider, cText; // Radius Coefficient slider and text element
+let c = 0; // Radius Coefficient itself
+let aSlider;
+let aText;
+let angle = 0;
+let sSlider;
+let sText;
+let s = 0;
 
 function setup() {
-    createCanvas(600, 600);
+    let canvas = createCanvas(600, 600);
+    canvas.parent('sketch-holder');
+
     angleMode(DEGREES);
     colorMode(HSB);
     background(0);
     noStroke();
-    updateBtn = createButton("Update").addClass("update");
-    updateBtn.mouseClicked(update);
-    cSlider = createSlider(0, 50, 10, 1).addClass("cSlider");
-    cText = createP().addClass("cText");
-    nSlider = createSlider(0, 6000, 2000, 100).addClass("nSlider");
-    nText = createP().addClass("nText");
-    aSlider = createSlider(137, 138, 137.78, 0.02).addClass("aSlider");
-    aText = createP().addClass("aText");
-    sSlider = createSlider(1, 50, 32, 1).addClass("sSlider");
-    sText = createP().addClass("sText");
+
+    cText = select('#rCoef');
+    cSlider = select('#rCoefSlider');
+    nText = select('#dotCount');
+    nSlider = select('#dotCountSlider');
+    aText = select('#aDelta');
+    aSlider = select('#aDeltaSlider');
+    sText = select('#dotSize');
+    sSlider = select('#dotSizeSlider');
+
     update();
 }
 
 function draw() {
     if (c != cSlider.value() | n != nSlider.value() | angle != aSlider.value() | s != sSlider.value()) {
         update();
-        console.log("FUCK");
     }
 }
 
@@ -42,11 +41,11 @@ function update() {
     background(0);
     translate(width / 2, height / 2);
     c = cSlider.value();
-    cText.html("Radius coeff.: " + c);
+    cText.html(c);
     n = nSlider.value();
-    nText.html("Total count: " + n);
+    nText.html(n);
     angle = aSlider.value();
-    aText.html("Angle delta: " + angle);
+    aText.html(angle);
     s = sSlider.value();
     sText.html("Dot size: " + s);
     for (let i = 0; i < n; i++) {

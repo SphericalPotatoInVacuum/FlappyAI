@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+
+    <title>flappy_bird_ai/</title>
+
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="sketch.js"></script>
+    <script src="pipe.js"></script>
+    <script src="player.js"></script>
+    <script src="nn.js"></script>
+    <script src="matrix.js"></script>
+    <script src="ga.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sketch-holder"> </div>
+        <div id="controls">
+            <p>Speed: <span id="speed">1</span>
+                <br>
+                <input id="speedSlider" type="range" min="1" max="10" value="1">
+            </p>
+            <p>Score: <span id="score">0</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
+            <p>
+                <button class="inline-button" id="saveButton">Save best</button>
+                <input type="file" id="fileInput" hidden="hidden">
+                <button class="inline-button" id="loadButton">Load best</button>
+                <button class="inline-button" id="runLoaded">Run loaded</button>
+            </p>
+        </div>
+    </div>
+</body>
+
+
+</html>
